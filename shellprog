@@ -1,0 +1,19 @@
+local component = require("component")
+local sides = require("sides")
+
+local plate3 = component.proxy(component.get("a2fcba4f"))
+local red1 = component.proxy(component.get("3493d382"))
+
+while(true) do
+if red1.getInput(sides.top) > 0 then
+print("train found")
+os.execute("trainarrival")
+os.sleep(0)
+break
+else
+print("Scanning - No Trains Found")
+os.sleep(0.2)
+end
+print("---------- ----------")
+os.sleep(0)
+end

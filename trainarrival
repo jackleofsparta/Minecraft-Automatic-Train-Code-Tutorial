@@ -1,0 +1,48 @@
+local component = require("component")
+local sides = require("sides")
+
+local plate = component.proxy(component.get("98bc6aca"))
+local homeplate = component.proxy(component.get("51318106"))
+local plate3 = component.proxy(component.get("a2fcba4f"))
+local red2 = component.proxy(component.get("fc814c69"))
+
+print("Running Arrival")
+plate.setThrottle(0)
+print("Throttle Set To 0")
+os.sleep(0.2)
+plate.setBrake(0.295)
+print("Brake Applied")
+os.sleep(0.2)
+plate.horn()
+os.sleep(0.2)
+plate.bell()
+os.sleep(0.2)
+print("Arrival Completed")
+os.sleep(1)
+
+while true do if red2.getInput(sides.top) > 0 then
+homeplate.setBrake(1)
+os.sleep(0.2)
+break
+else
+print("Waiting For Train To Stop")
+os.sleep(0.2)
+end
+print("---------- ----------")
+os.sleep(0.2)
+end
+print("Train Succesfully Stopped")
+print("Departing In 60 Seconds")
+os.sleep(10)
+print("Departing in 50 Seconds")
+os.sleep(10)
+print("Departing in 40 Seconds")
+os.sleep(10)
+print("Departing in 30 Seconds")
+os.sleep(10)
+print("Departing in 20 Seconds")
+os.sleep(10)
+print("Departing in 10 Seconds")
+os.sleep(10)
+print("Train Is Departing")
+os.execute("traindeparture")
