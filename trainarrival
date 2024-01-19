@@ -1,10 +1,10 @@
 local component = require("component")
 local sides = require("sides")
 
-local plate = component.proxy(component.get("98bc6aca"))
-local homeplate = component.proxy(component.get("51318106"))
-local plate3 = component.proxy(component.get("a2fcba4f"))
-local red2 = component.proxy(component.get("fc814c69"))
+local plate = component.proxy(component.get("20eeee4d"))
+local homeplate = component.proxy(component.get("9c41d0b7"))
+local plate3 = component.proxy(component.get("f56aea9a"))
+local red2 = component.proxy(component.get("15735abc"))
 
 print("Running Arrival")
 plate.setThrottle(0)
